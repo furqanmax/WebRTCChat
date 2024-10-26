@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Peer Communication</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="peerRole">Loading...</h1>
+        <div id="connectionCode" class="connection-code">Loading...</div>
+        <div id="qrcode" class="qr-code"></div>
+        <div id="status">Status: <span id="connectionStatus">Disconnected</span></div>
+        <div id="chatContainer">
+            <div id="messages" class="messages"></div>
+            <div class="input-container">
+                <input id="messageInput" class="message-input" placeholder="Type your message..." />
+                <button id="sendMessage" class="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="qrcode.js"></script>
+    <script type="module" src="peer.js"></script>
+    
+</body>
+</html>
